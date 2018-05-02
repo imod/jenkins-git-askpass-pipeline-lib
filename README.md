@@ -1,6 +1,6 @@
 # gitAskPass - GIT_ASKPASS
 
-small jenkins pipeline example extension to ease the usage of GIT_ASKPASS
+small jenkins pipeline example extension to ease the usage of GIT_ASKPASS on a remote repositories via HTTP/HTTPS
 
 ### how to use
 
@@ -16,7 +16,7 @@ small jenkins pipeline example extension to ease the usage of GIT_ASKPASS
             stage ('build') {
             steps {
                 script {
-                    gitAskPass('MY_GIT_CREDENTIALS', 'git clone git@github.com:imod/jenkins-git-askpass-pipeline-lib.git')
+                    gitAskPass('MY_GIT_CREDENTIALS', 'git clone https://github.com/imod/jenkins-git-askpass-pipeline-lib.git')
                 }
             }
             }
