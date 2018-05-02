@@ -2,9 +2,9 @@
 
 small jenkins pipeline example extension to ease the usage of GIT_ASKPASS
 
-how to use in pipeline script (e.g. Jenkinsfile):
+### how to use
 
-  `gitAskPass('MY_GIT_CREDENTIALS_ID', 'git push origin master')`
+  `gitAskPass('<GIT_CREDENTIALS_ID_TO_USE>', '<the full git commandneeding authentication>')`
 
 
   ```groovy
@@ -16,7 +16,7 @@ how to use in pipeline script (e.g. Jenkinsfile):
             stage ('build') {
             steps {
                 script {
-                    gitAskPass('YOOBOT_BITBUCKET', 'git clone git@bitbucket.org:yooture/git-pull-issue.git')
+                    gitAskPass('MY_GIT_CREDENTIALS', 'git clone git@github.com:imod/jenkins-git-askpass-pipeline-lib.git')
                 }
             }
             }
