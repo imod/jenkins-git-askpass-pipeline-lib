@@ -4,7 +4,7 @@ small jenkins pipeline example extension to ease the usage of GIT_ASKPASS
 
 ### how to use
 
-  `gitAskPass('<GIT_CREDENTIALS_ID_TO_USE>', '<the full git commandneeding authentication>')`
+  `gitAskPass('<GIT_CREDENTIALS_ID_TO_USE>', '<the full git command needing authentication>')`
 
 
   ```groovy
