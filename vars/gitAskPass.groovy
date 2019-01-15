@@ -5,7 +5,7 @@ def call(credentialsId, gitCommand) {
     writeFile(file: tmpAskPassScript, text: askPassScript)
     withCredentials([usernamePassword(credentialsId: credentialsId, passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {            
         sh """
-        chmod +x ${tmpAskPassScript}
+        chmod +x \"${tmpAskPassScript}\"
         GIT_ASKPASS=${tmpAskPassScript} ${gitCommand}
         """
     }
